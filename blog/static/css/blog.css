@@ -1,0 +1,28 @@
+body {
+    padding-left: 15px;
+}
+
+
+.cv-download-link {
+    border: 2px solid cornflowerblue;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 26px;
+    transition: background-color 0.8s, color 0.5s;
+    box-shadow: 0 0 20px grey;
+}
+
+.cv-download-link:hover {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+.cv-download-link:focus {
+    color: white;
+    background-color: cornflowerblue;
+    outline: none;
+}

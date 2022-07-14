@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <title>Blog programistyczny</title>
-    </head>
-    <body>
-        <a href="http://127.0.0.1:8000/admin">Panel admina</a>
-        <p>Witam na blogu</p>
-        {%for post in posts%}
+{%extends 'blog/base.html'%}
+{%block content%}
+    {%for post in posts%}
         <div>
             <p>opublikowany: {{post.publish_date}}</p>
-            <h2>{{post.title}}</h2>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <em>{{post.text|linebreaksbr}}</em>        
         </div>
-        {%endfor%}
-    </body>
-</html>
+    {%endfor%}
+{%endblock%}
